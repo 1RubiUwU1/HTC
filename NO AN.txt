@@ -1,0 +1,212 @@
+--//  Auto HTC__Made By LoncinGP150 / superior48#9447  \\--
+
+Move1 = "TS Molotov"
+Move2 = "Mach Kick"
+Move3 = "Flash Skewer"
+Move4 = "Neo Wolf Fang Fist"
+Move5 = "Meteor Crash"
+Move6 = "Wolf Fang Fist"
+Move7 = ""
+Move8 = "Sweep Kick"
+
+
+
+_G.Charge = 3 -- Time To Charge
+_G.Transform = "h" -- Ley To Transform
+_G.AutoSenzu = false  -- Will Use Your Blue Beans/Jars
+_G.WaitTime = 2  -- Time Until Script Is Executed
+
+
+
+--// Variables \\--
+local plr = game:GetService("Players").LocalPlayer
+local Char = plr.Character
+local Earth = 536102540
+local HTC = 882375367
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+local Live = game:WaitForChild("Workspace").Live
+
+
+repeat
+    wait()
+until game:IsLoaded() and Char
+Char:WaitForChild("Ki")
+Char:WaitForChild("Humanoid")
+Char:WaitForChild("HumanoidRootPart")
+
+wait(_G.WaitTime)
+
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Executed!",
+    Text = "Press K To View Stats!"
+  })
+
+Mouse.KeyDown:connect(function(Key)
+    Key = Key:lower()
+    if Key == "k" then
+        game:GetService("Players").LocalPlayer.PlayerGui.HUD.Bottom.Stats.Visible = true
+    end
+ end)
+
+
+if game.PlaceId == Earth then
+    game:GetService("TeleportService"):Teleport(HTC)
+end
+
+if game.PlaceId == HTC then
+
+    game:GetService("Players").LocalPlayer.PlayerGui.HUD.Bottom.SP.Visible = true
+    game:GetService("Players").LocalPlayer.PlayerGui.HUD.Bottom.SP.Text = "Made By LoncinGP150 / superior48#9447    V1 AutoHTC  "
+    game:GetService("Players").LocalPlayer.PlayerGui.HUD.Bottom.SP.BackgroundColor3 = Color3.fromRGB(13, 105, 172)
+    
+
+    
+        game.Players.LocalPlayer.PlayerGui.HUD.FullSize.Money.Text = "superior48#9447 on discord :)   V1 AutoHTC  "
+        game.Players.LocalPlayer.PlayerGui.HUD.FullSize.Quests.TextLabel.Text = "Made By txkexl"
+        plr.PlayerGui.HUD.FullSize.Quests.ImageLabel:Destroy()
+
+        wait(1)
+
+
+
+    plr.Backpack.ServerTraits.Input:FireServer({[1] = "x"},CFrame.new(0,0,0),nil,false)
+    wait(_G.Charge)
+    plr.Backpack.ServerTraits.Transform:FireServer(_G.Transform)
+    wait(1)
+    plr.Backpack.ServerTraits.Input:FireServer({[1] = "xoff"},CFrame.new(0,0,0),nil,false)
+
+    wait(1)
+
+   Char.HumanoidRootPart.CFrame = CFrame.new(-59.8978653, 237.826065, -194.40834, -0.993867159, 0, -0.110581204, 0, 1, 0, 0.110581204, 0, -0.993867159) 
+
+   wait(.2)
+
+   game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack["Dragon Throw"])
+if game.Players.LocalPlayer.Character:FindFirstChild("Dragon Throw") then
+game.Players.LocalPlayer.Character["Dragon Throw"].Activator.Flip:Destroy()
+end
+wait(.1)
+    Char["Dragon Throw"]:Activate()
+    wait(.2)
+    Char["Dragon Throw"]:Deactivate()
+    Char["Dragon Throw"].Parent = game.Players.LocalPlayer.Backpack
+
+    local LP = game:GetService("Players").LocalPlayer
+local LPMouse = LP:GetMouse()
+local LPHRP = game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") or game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RootPart
+local LPChar = game:GetService("Players").LocalPlayer.Character
+
+local InitNoSlow = false
+coroutine.resume(coroutine.create(function()
+   repeat wait() until InitNoSlow == true
+   while wait() do
+       for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+           if v.Name == "Justice Combination" then
+               local action = game.Players.LocalPlayer.Character:WaitForChild("Action")
+               if action then wait() action:Destroy() end end
+           if v.Name == "Action" then
+               v:Destroy()
+           end
+           if v.Name == "Attacking" then
+               v:Destroy()
+           end
+           if v.Name == "Using" then
+               v:Destroy()
+           end
+           if v.Name == "hyper" then
+               v:Destroy()
+           end
+           if v.Name == "Hyper" then
+               v:Destroy()
+           end
+           if v.Name == "heavy" then
+               v:Destroy()
+           end
+           if v.Name == "KiBlasted" then
+               v:Destroy()
+           end
+           if v.Name == "Tele" then
+               v:Destroy()
+           end
+           if v.Name == "tele" then
+               v:Destroy()
+           end
+           if v.Name == "Killed" then
+               v:Destroy()
+           end
+           if v.Name == "Slow" then
+               v:Destroy()
+           end
+           if v.Name == "Block" and v.Value == true then
+               v.Value = false
+           end
+       end
+   end
+end))
+
+
+wait(.2)
+
+InitNoSlow = true
+
+local Char = game.Players.LocalPlayer.Character
+    local Live = game:WaitForChild("Workspace").Live
+    local Camera = game:GetService("Workspace").CurrentCamera
+    local plr = game.Players.LocalPlayer
+    
+    Char.Humanoid:ChangeState(11)
+    game.Workspace:WaitForChild("Live")
+    game.Workspace.Live:WaitForChild(plr.Name)
+    game:GetService("RunService").RenderStepped:connect(
+    function()
+    game.Workspace.CurrentCamera.CFrame =
+                   CFrame.new(Char.HumanoidRootPart.Position) * CFrame.new(0, 2, 10)
+    Camera.FieldOfView = 120
+    end)
+    
+
+    if _G.AutoSenzu == true then
+        game:GetService("RunService").RenderStepped:connect(
+        function()
+        local bean = true
+        local beanEvent = game:GetService("Players").LocalPlayer.Backpack.ServerTraits.EatSenzu
+
+        beanEvent:FireServer(bean)
+    end)
+end
+
+game:GetService("RunService").RenderStepped:connect(
+        function()
+            if game.Players.LocalPlayer.Character.Ki.Value <= 80 then
+                local A_1 = {
+                    [1] = "m2"
+                }
+                local A_2 =
+                    CFrame.new(
+                    0,0,0
+                )
+                local A_3 = nil
+                local A_4 = false
+                local Event = game:GetService("Players").LocalPlayer.Backpack.ServerTraits.Input
+                Event:FireServer(A_1, A_2, A_3, A_4)
+            end
+        end)
+        
+    while wait() do
+        local plr = game.Players.LocalPlayer
+   for i, v in pairs(plr.Backpack:GetChildren()) do
+   if
+   v.Name == Move1 or v.Name == Move2 or v.Name == Move3 or v.Name == Move4 or v.Name == Move5 or v.Name == Move6 or v.Name == Move7 or v.Name == Move8
+      then
+       v.Parent = game.Workspace.Live[plr.Name]
+   
+      v:Activate()
+      v:Deactivate()
+     wait(.2)
+      v.Parent = game.Players.LocalPlayer.Backpack
+      end
+    end
+end
+end
